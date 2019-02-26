@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - KredekProtopyte</title>
 
-    @*favicon*@
+    <!-- Favicon -->
     <link rel="SHORTCUT ICON" href="~/favicon.ico" />
 
     <environment include="Development">
@@ -55,7 +55,7 @@
         </nav>
     </header>
 
-    @await Html.PartialAsync("~/Pages/Shared/_BannerPartial.cshtml", "../img/Index.jpg")
+    @await Html.PartialAsync("_BannerPartial.cshtml", "../img/Index.jpg")
 
     <div class="container">
         <partial name="_CookieConsentPartial" />

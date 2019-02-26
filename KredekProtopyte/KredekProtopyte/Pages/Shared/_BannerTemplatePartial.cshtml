@@ -1,0 +1,44 @@
+﻿@using KredekProtopyte.Data;
+@model BannerTemplate
+
+<style>
+    .responsiveBackgroundImage {
+        width: 100vw;
+        background-image: url(@Model.ImageUrl);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .responsiveBackgroundImage h1 {
+            font-size: 65PX !important;
+            padding: 150px 0px 0px 0px;
+
+        }
+
+    .responsiveBackgroundImage h2, .responsiveBackgroundImage h1 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+        font-size: 40PX;
+        font-family: "Lato";
+        font-weight: 700;
+        margin-left: 100px;
+        color: #f8f8f8;
+        padding: 50px 0px 50px 0px;
+    }
+
+    .responsiveBackgroundImage hr {
+        max-width: 50%;
+        border-top: 5px solid #FFFFFF;
+    }
+}
+</style>
+
+<div class="responsiveBackgroundImage">
+    <div class="text-center align-content-center">
+        <h1>@Model.Title</h1>
+        <hr />
+        <h2>@Model.SubTitle</h2>
+    </div>
+</div>
+
+<br />
