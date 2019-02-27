@@ -5,15 +5,11 @@
     string bannerTemplateId = "bannerTemplateId" + Model.Id;
 }
 
+@await Html.PartialAsync("../Shared/TemplatesPartials/_ResponsiveBackgroundImageStyle")
+
 <style>
     #@bannerTemplateId {
         background-image: url(@Model.ImageUrl);
-    }
-
-    .responsiveBackgroundImage {
-        width: 100vw;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .responsiveBackgroundImage h1 {
