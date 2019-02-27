@@ -4,6 +4,8 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Kredek</h1>
+<h1>Strona glowna</h1>
 
 @await Html.PartialAsync("_BannerTemplatePartial", Model.BannerTemplate)
+@await Html.PartialAsync("_BannerImageAndTextPartial", Model.ImageAndTextTemplateLeft)
+@await Html.PartialAsync("_BannerImageAndTextPartial", Model.ImageAndTextTemplateRight)

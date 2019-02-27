@@ -1,10 +1,17 @@
 ﻿@using KredekProtopyte.Data;
 @model BannerTemplate
 
+@{
+    string bannerTemplateId = "bannerTemplateId" + Model.Id;
+}
+
 <style>
+    #@bannerTemplateId {
+        background-image: url(@Model.ImageUrl);
+    }
+
     .responsiveBackgroundImage {
         width: 100vw;
-        background-image: url(@Model.ImageUrl);
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -12,7 +19,6 @@
     .responsiveBackgroundImage h1 {
             font-size: 65PX !important;
             padding: 150px 0px 0px 0px;
-
         }
 
     .responsiveBackgroundImage h2, .responsiveBackgroundImage h1 {
@@ -33,7 +39,7 @@
 }
 </style>
 
-<div class="responsiveBackgroundImage">
+<div class="responsiveBackgroundImage" id="@bannerTemplateId">
     <div class="text-center align-content-center">
         <h1>@Model.Title</h1>
         <hr />
