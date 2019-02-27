@@ -4,8 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Strona glowna</h1>
 
-@await Html.PartialAsync("_BannerTemplatePartial", Model.BannerTemplate)
-@await Html.PartialAsync("_BannerImageAndTextPartial", Model.ImageAndTextTemplateLeft)
-@await Html.PartialAsync("_BannerImageAndTextPartial", Model.ImageAndTextTemplateRight)
+@await Html.PartialAsync("TemplatesPartials/_BannerTemplatePartial", Model.BannerTemplate)
+@await Html.PartialAsync("TemplatesPartials/_BannerImageAndTextPartial", Model.ImageAndTextTemplateLeft)
+@await Html.PartialAsync("TemplatesPartials/_BannerImageAndTextPartial", Model.ImageAndTextTemplateRight)
