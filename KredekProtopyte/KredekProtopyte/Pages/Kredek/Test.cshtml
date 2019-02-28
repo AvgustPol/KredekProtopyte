@@ -1,0 +1,13 @@
+﻿@page
+@model KredekProtopyte.Pages.Kredek.TestModel
+@{
+    ViewData["Title"] = "Test";
+}
+
+<h1>Test</h1>
+
+@foreach (var model in Model.TestContent)
+{
+    WriteLiteral(model);
+}
+
