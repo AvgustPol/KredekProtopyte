@@ -8,7 +8,8 @@ namespace KredekProtopyte.Pages.Kredek
         public TestModel()
         {
             TestContent = new List<string>() {
-                "@await Html.PartialAsync(\"TemplatesPartials/_BannerTextAndLinksPartial\")"
+                "@await Html.PartialAsync(\"TemplatesPartials/_BannerTextAndLinksPartial\")",
+                "<h2> TEST H2 </h2>"
             };
         }
 
