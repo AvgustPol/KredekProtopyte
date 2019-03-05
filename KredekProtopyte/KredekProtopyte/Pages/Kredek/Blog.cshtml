@@ -4,59 +4,38 @@
     ViewData["Title"] = "Blog";
 }
 
+
 @await Html.PartialAsync("../Shared/TemplatesPartials/_BannerPartial.cshtml", "../img/Index.jpg")
 
-<div class="container text-center" style="width: 42rem;">
-    <div class="card mb-4">
-        <div class="card-body">
-            <h5 class="card-title">W ten wtorek odbyły się już piąte laboratoria kursu CPC-2018-2 </h5>
-        </div>
-        <img class="card-img-top"
-             src="https://scontent.fpoz1-1.fna.fbcdn.net/v/t1.0-9/47372423_1987907994649750_1508135804159918080_o.jpg?_nc_cat=105&_nc_ht=scontent.fpoz1-1.fna&oh=f3066232916576001d27f0158b194152&oe=5D18FA62"
-             alt="Card image cap">
-        <div class="card-body">
-            <p class="card-text">
-                Część webową naszego kursu rozpoczęliśmy napisaniem testera czasu reakcji 🔥
-
-                Do zobaczenia za tydzień ☺️
-            </p>
-            <p class="card-text"><small class="text-muted">7 November 2018</small></p>
-        </div>
-    </div>
-
-    <div class="card mb-4">
-        <div class="card-body">
-            <h5 class="card-title">Relacyjne bazy danych? Tworzenie zapytań SQL? </h5>
-        </div>
-        <img class="card-img-top"
-             src="https://scontent.fpoz1-1.fna.fbcdn.net/v/t1.0-9/46482801_1970307949743088_6933234000760668160_o.jpg?_nc_cat=100&_nc_ht=scontent.fpoz1-1.fna&oh=def5733aedf04a8c59f4a2ad3b1fffc3&oe=5D1E53C0"
-             alt="Card image cap">
-        <div class="card-body">
-            <p class="card-text">
-                Po wtorkowych zajęciach dla uczestników naszego kursu to już nic trudnego 🔥
-
-                Dziękujemy za współpracę i wszystkich uczestników zapraszamy znów w kolejny wtorek 😊
-            </p>
-            <p class="card-text"><small class="text-muted">22 November 2018</small></p>
-        </div>
-    </div>
-
-    <div class="card mb-4">
-        <div class="card-body">
-            <h5 class="card-title">KN Kredek - pierwsze zajęcia kursu C# </h5>
-        </div>
-        <img class="card-img-top"
-             src="https://scontent.fpoz1-1.fna.fbcdn.net/v/t1.0-9/35102599_1738791922894693_4167762708428488704_o.jpg?_nc_cat=104&_nc_ht=scontent.fpoz1-1.fna&oh=4525e5e27b08bf0f38485bdd9bec3418&oe=5CDDAB5F"
-             alt="Card image cap">
-        <div class="card-body">
-            <p class="card-text">
-                Wczoraj odbyły się pierwsze zajęcia kursu C# w tym semestrze 🔥
-                W naszych zajęciach wzięło udział aż 138 osób 🔥
-                Dziękujemy wszystkim za obecność i współpracę 😊
-
-                Do zobaczenia za tydzień!
-            </p>
-            <p class="card-text"><small class="text-muted">7 November 2018</small></p>
+<div class="container ">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-sm-12 ">
+            @foreach (var post in Model.FeedPostsDto.Posts)
+            {
+                <div class="card bg-light mb-4 p-5 p-sm-0 p-md-2">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="card-text">
+                                    <a href="@post.SourceUrl">Zobać na Facebook </a>
+                                </h5>
+                            </div>
+                            <div class="col-6 text-right">
+                                <p class="card-text">
+                                    <small class="text-muted">@post.CreatedTime</small>
+                                </p>
+                            </div>
+                        </div>
+                        <hr />
+                        <p class="card-title text-justify text-center">
+                            @post.Content
+                        </p>
+                    </div>
+                    <img class="card-img-top card-img-bottom"
+                         src="@post.Picture"
+                         alt="Card image cap">
+                </div>
+            }
         </div>
     </div>
 </div>
