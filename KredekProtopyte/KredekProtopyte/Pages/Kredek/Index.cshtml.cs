@@ -13,7 +13,7 @@ namespace KredekProtopyte.Pages.Kredek
 
         public async Task<IActionResult> CreateNewRazorPage()
         {
-            //TODO why it is not working? It doesnt create a new file. Maybe this code is for copying only directories
+            //TODO why it is not working? It doesnt create a new file. Maybe this code is for copying only directories .
             string SourcePath = @"D:\Programming\CMS\KredekProtopyte\KredekProtopyte\KredekProtopyte\Pages\Kredek\Index.cshtml.cs";
             string DestinationPath = $@"D:\Programming\CMS\KredekProtopyte\KredekProtopyte\KredekProtopyte\Pages\Kredek\{PageName}.cshtml.cs";
 
