@@ -9,11 +9,12 @@ namespace KredekProtopyte.Pages.Kredek
     public class IndexModel : PageModel
     {
         public PageContent PageContent { get; set; }
+        public string PageName { get; set; } = "MyNewTestPage";
 
         public async Task<IActionResult> CreateNewRazorPage()
         {
-            string SourcePath = "";
-            string DestinationPath = "";
+            string SourcePath = @"D:\Programming\CMS\KredekProtopyte\KredekProtopyte\KredekProtopyte\Pages\Kredek\Index.cshtml.cs";
+            string DestinationPath = $@"D:\Programming\CMS\KredekProtopyte\KredekProtopyte\KredekProtopyte\Pages\Kredek\{PageName}.cshtml.cs";
 
             //Now Create all of the directories
             foreach (string dirPath in Directory.GetDirectories(SourcePath, "*",
@@ -28,8 +29,16 @@ namespace KredekProtopyte.Pages.Kredek
             return null;
         }
 
+        //public async Task<IActionResult> CreateNewRazorPage()
+        //{
+        //    CreateNewRazorPage(PageName, );
+        //    CreateNewRazorPage(PageName, );
+        //}
+
         public void OnGet()
         {
+            CreateNewRazorPage();
+
             // TODO : add DbContext And Users registration, facebook authentication, etc.
             PageContent = new PageContent();
 
