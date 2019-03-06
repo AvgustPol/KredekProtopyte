@@ -1,6 +1,6 @@
 ﻿namespace KredekProtopyte.Data
 {
-    public class ImageAndTextTemplate : Entity
+    public class ImageAndTextTemplate : Entity, IPageContentElement
     {
         public string ImageUrl { get; set; }
 

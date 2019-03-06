@@ -1,0 +1,18 @@
+﻿@page
+@model KredekProtopyte.Pages.Template.BaseModel
+@{
+    ViewData["Title"] = "Base";
+}
+
+<h1>Base</h1>
+
+@*@foreach (var VARIABLE in Model.PageContent)
+    {
+
+    }
+
+    @await Html.PartialAsync("TemplatesPartials/_BannerTemplatePartial", Model.PageContent.BannerTemplate)
+    @await Html.PartialAsync("TemplatesPartials/_BannerImageAndTextPartial", Model.PageContent.ImageAndTextTemplateRight)
+    @await Html.PartialAsync("TemplatesPartials/_BannerImageAndTextPartial", Model.PageContent.ImageAndTextTemplateRight)
+
+    @await Html.PartialAsync("TemplatesPartials/_BannerTextAndLinksPartial")*@

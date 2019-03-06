@@ -1,11 +1,21 @@
 ﻿@page
+@using KredekProtopyte.Data
+@using Microsoft.AspNetCore.Mvc.Rendering
 @model KredekProtopyte.Pages.Kredek.IndexModel
 @{
     ViewData["Title"] = "Index";
 }
 
-@await Html.PartialAsync("TemplatesPartials/_BannerTemplatePartial", Model.BannerTemplate)
-@await Html.PartialAsync("TemplatesPartials/_BannerImageAndTextPartial", Model.ImageAndTextTemplateLeft)
-@await Html.PartialAsync("TemplatesPartials/_BannerImageAndTextPartial", Model.ImageAndTextTemplateRight)
-
+@foreach (var item in Model.PageContent.Elements)
+{
+    if (item is ImageAndTextTemplate)
+    {
+        @await Html.PartialAsync("TemplatesPartials/_BannerImageAndTextPartial", (ImageAndTextTemplate)item)
+    }
+    else
+    if (item is BannerTemplate)
+    {
+        @await Html.PartialAsync("TemplatesPartials/_BannerTemplatePartial", (BannerTemplate)item)
+    }
+}
 @await Html.PartialAsync("TemplatesPartials/_BannerTextAndLinksPartial")
