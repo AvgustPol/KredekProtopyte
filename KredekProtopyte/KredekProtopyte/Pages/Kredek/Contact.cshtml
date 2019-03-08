@@ -6,9 +6,20 @@
 
 @await Html.PartialAsync("../Shared/TemplatesPartials/_BannerPartial.cshtml", "../img/Index.jpg")
 
-
-
 <div class="container">
+    <div class="text-center">
+        <p class="display-2">
+            knkredek @@ gmail.com
+        </p>
+        <h2>lub</h2>
+        <p class="display-2">
+            <a href="
+            https://www.facebook.com/KNKredek/">Facebook</a>
+        </p>
+    </div>
+</div>
+
+@*<div class="container">
     <h1>
         Masz pytania ? A może odpowiedzi? Napisz do nas!
     </h1>
@@ -111,8 +122,7 @@
             </div>
         </div>
     </div>
-</div>
-
+</div>*@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
