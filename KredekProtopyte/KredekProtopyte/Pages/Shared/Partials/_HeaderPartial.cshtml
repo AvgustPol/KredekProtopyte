@@ -1,8 +1,8 @@
 ﻿<header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow ">
         <div class="container">
-            <a class="navbar-brand" asp-area="" asp-page="/Index"> 
-                <img src="~/img/logo.png" style="height: 30px"/>
+            <a class="navbar-brand" asp-area="" asp-page="/Index">
+                <img src="~/img/logo.png" style="height: 30px" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -10,16 +10,13 @@
             </button>
             <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                 <ul class="navbar-nav ">
-                @*use flex-grow-1 class to make it stick to the right 
-                <ul class="navbar-nav flex-grow-1">*@
+                    @*use flex-grow-1 class to make it stick to the right
+                        <ul class="navbar-nav flex-grow-1">*@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/Kredek/Index">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/Kredek/Team">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Kredek/Contact">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/Kredek/Course">Course</a>
@@ -30,8 +27,11 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/Kredek/About">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Kredek/Contact">Contact</a>
+                    </li>
                 </ul>
-</div>
+            </div>
         </div>
     </nav>
 </header>
