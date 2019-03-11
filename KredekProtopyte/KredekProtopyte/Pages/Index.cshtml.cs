@@ -5,7 +5,7 @@ namespace KredekProtopyte.Pages
 {
     public class IndexModel : PageModel
     {
-        public IActionResult OnGetAsync()
+        public IActionResult OnGet()
         {
             return RedirectToPage("/Kredek/Index");
         }
