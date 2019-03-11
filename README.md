@@ -1,5 +1,8 @@
 ### KredekProtopyte design preview  
 
+# website hosted on : http://kredek.dce.pwr.edu.pl
+
+
 # Home preview  
 ![alt text](https://github.com/AvgustPol/KredekProtopyte/blob/master/Preview%20Images/Kredek%20home.png?raw=true "Home preview")  
   
