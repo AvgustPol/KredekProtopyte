@@ -46,18 +46,28 @@ namespace KredekProtopyte.Pages.Kredek
 
             PageContent.Elements.Add(new ImageAndTextTemplate()
             {
-                IsLeft = true,
-                ImageUrl = "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-                Title = "Tutaj bedzie krotki opis naszego kola",
-                Text = "Nam cursus cursus enim, id tempor velit aliquet nec. Pellentesque tincidunt tortor et ex aliquam, eget lobortis nunc porta. Cras non tempor diam. Sed eu ullamcorper nulla. Quisque sodales dictum nisi. Praesent eget porttitor justo, ultricies gravida nisi. Maecenas vestibulum, est sit amet gravida fermentum, nisi mauris elementum ipsum, non vulputate neque libero a ipsum. Quisque pulvinar fringilla dui quis maximus. Cras ut luctus massa. Etiam porttitor quam et ligula laoreet eleifend. Nullam non elementum diam, vel placerat orci."
+                IsLeft = false,
+                ImageUrl = "https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                Title = "Krotki opis naszego koła",
+                Text = "Koło naukowe \"Kredek\" zostało założone dnia 1 Marca 2007. " +
+                       "Co semestr uruchamiamy kolejną edycję, podczas której z ambitnych studentów robimy profesjonalnych informatyków." +
+                       "Celem Koła Naukowego jest poznawanie nowych technologii programistycznych, umiejętności przydatnych w przyszłej karierze zawodowej " +
+                       "oraz uczenie się od siebie nawzajem. " +
+                       "Nasze założenia realizujemy poprzez spotkania, wykłady, laboratoria oraz wspólne projekty."
             });
 
             PageContent.Elements.Add(new ImageAndTextTemplate()
             {
-                IsLeft = false,
-                ImageUrl = "https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-                Title = "A tutaj nie bedzie krotki opis naszego kola",
-                Text = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                IsLeft = true,
+                ImageUrl = "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                Title = "Krótki opis kursu",
+                Text = "Nasz kurs powstał z myślą o osobach początkujących, które chciałyby zdobyć wiedzę z zakresu programowania w języku C# " +
+                       "oraz innych technologii pozwalających na budowanie nowoczesnych i responsywnych aplikacji. " +
+                       "W trakcie kursu będziesz wraz z prowadzącymi budować kolejne aplikacje " +
+                       "oraz przyswajać wiele przydatnych wskazówek i dobrych praktyk. " +
+                       "Każde zajęcia będą zwieńczone zadaniem domowym umożliwiającym ugruntowanie zdobytej wiedzy " +
+                       "i wykazanie się kreatywnością. " +
+                       "Kurs kończy się egzaminem którego zdanie gwarantuje otrzymanie certyfikatu dokumentującego uzyskane umiejętności"
             });
         }
 

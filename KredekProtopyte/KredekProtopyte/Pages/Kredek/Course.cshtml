@@ -1,8 +1,55 @@
 ﻿@page
+@using KredekProtopyte.Data
 @model KredekProtopyte.Pages.Kredek.CourseModel
 @{
     ViewData["Title"] = "Course";
 }
 
 
-@await Html.PartialAsync("~/Pages/Shared/TemplatesPartials/_WeAreWorkingOnItPartial.cshtml")
+
+
+@{
+    string textInfo0 = "Informacje ogólne";
+    string textInfo1 = "Kurs rozpoczniemy od zajęć umożliwiających poznanie środowiska Visual Studio oraz narzędzi, z których będziemy korzystać w trakcie kursu. Przedstawione zostaną informacje na temat składni języka, słów kluczowych oraz konstrukcji występujących w języku C#. Już po pierwszych zajęciach nie będą Ci obce elementy takie jak: zmienne, pętle, funkcje,operatory, komentarze i wiele innych.";
+    string textInfo2 = "Kolejne zajęcia pozwolą Wam na zdobycie wiedzy z zakresu programowania obiektowego, z którego będziemy korzystać przez resztę kursu. Zaznajomimy się między innymi z klasami, interfejsami, metodami, dziedziczeniem, polimorfizmem, hermetyzacją.";
+    string textInfo3 = "Podczas kolejnych spotkań nauczymy się podłączać nasze aplikacje do bazy danych oraz pracować na danych z nich pozyskanych. Kolejne zajęcia dostarczą nam wiedzy na temat aplikacji webowych i wielu przydatnych narzędzi programistycznych wraz z dużą ilością dobrych praktyk i przykładów ich wykorzystania.";
+    string textInfo4 = "Brzmi ciekawie? Nie zwlekaj z decyzją i weź udział w naszym kursie, czekamy na Ciebie.";
+    
+    string dyplomImg = "http://kredek.iiar.pwr.edu.pl/img/ogloszenia/egzamin-CPC-2018-2/certyfikaty/2018-2_1_Dominik_Frankowski_wm.png";
+    string dyplomAlt = "Kurs kończy się egzaminem którego zdanie gwarantuje otrzymanie certyfikatu dokumentującego uzyskane umiejętności. Gratulacje dla Dominika Frankowskiego, który uzyskał‚ najwyższy wynik spośród 25 uczestników Egzaminu CPC Edycja 2018-2";
+
+}
+
+<div class="container p-lg-5">
+    <div class="row text-center">
+        <div class="col">
+            <h1>Edycja <strong>CPC 2019-1</strong></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>@textInfo0</h2>
+            <ul>
+                <li>@textInfo1</li>
+                <li>@textInfo2</li>
+                <li>@textInfo3</li>
+                <li>@textInfo4</li>
+            </ul>
+        </div>
+    </div>
+    @await Html.PartialAsync("TemplatesPartials/_BannerImageAndTextPartial", new ImageAndTextTemplate()
+    {
+        Text = "W kolejnej edycji programowania poruszymy następujące tematy, które poprowadzą eksperci w swojej dziedzinie.",
+        ImageUrl = "https://scontent.fwaw3-2.fna.fbcdn.net/v/t1.0-9/54436436_2137597209680827_6362114508441255936_n.jpg?_nc_cat=102&_nc_ht=scontent.fwaw3-2.fna&oh=e48b28438277956a0b723d597c7c7cb8&oe=5D095103",
+        Title = "Tematy wykładów",
+        IsLeft = true
+    })
+
+    @await Html.PartialAsync("~/Pages/Shared/TemplatesPartials/_FAQPartial.cshtml")
+    @await Html.PartialAsync("TemplatesPartials/_BannerImageAndTextPartial", new ImageAndTextTemplate()
+{
+    Text = dyplomAlt,
+    ImageUrl = dyplomImg,
+    Title = "Zdjęcie dyplomu"
+})
+</div>
