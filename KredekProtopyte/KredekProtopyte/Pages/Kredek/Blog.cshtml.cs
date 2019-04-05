@@ -19,7 +19,7 @@ namespace KredekProtopyte.Pages.Kredek
 
         public async Task OnGetAsync()
         {
-            FeedPostsDto = await _facebookService.GetPostsAsync(10);
+            FeedPostsDto = await _facebookService.GetPostsAsync(5);
 
             Debug.Write("test");
         }

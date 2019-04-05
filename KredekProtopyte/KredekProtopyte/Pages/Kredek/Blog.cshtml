@@ -4,16 +4,11 @@
     ViewData["Title"] = "Blog";
 }
 
-@await Html.PartialAsync("../Shared/TemplatesPartials/_BannerPartial.cshtml", "../img/Index.jpg")
-
-<p class="display-1 text-center">Pierwsze </p>
-<h1 class="text-center">10 postow</h1>
-<p class="display-4 text-center">z naszego blogu na </p>
-<p class="display-1 text-center"><a href="https://www.facebook.com/KNKredek/">Facebooku</a></p>
-<br />
-<br />
+@await Html.PartialAsync("../Shared/TemplatesPartials/_BannerPartial.cshtml", ("../img/bannerBlog.jpg", "Blog"))
 
 <div class="container ">
+    <br />
+    <br />
     <div class="row">
         <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-sm-12 ">
             @foreach (var post in Model.FeedPostsDto.Posts)
@@ -42,6 +37,17 @@
                     </div>
                 </div>
             }
+
+            <div class="card bg-light mb-4 p-5 p-sm-0 p-md-2">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-10 offset-1 text-center">
+                            Więcej znajdziesz na
+                            <a href="https://www.facebook.com/KNKredek/">Facebooku</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

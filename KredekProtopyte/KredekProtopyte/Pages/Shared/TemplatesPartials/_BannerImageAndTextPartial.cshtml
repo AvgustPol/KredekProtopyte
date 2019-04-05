@@ -1,27 +1,26 @@
 ﻿@using KredekProtopyte.Data;
 @model ImageAndTextTemplate
 
-<div class="container p-lg-5">
+<div class="container">
     <div class="row">
         @if (Model.IsLeft)
         {
-
-            <div class="col-6 p-lg-5">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-5">
+                <img class="img-thumbnail" src="@Model.ImageUrl" />
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-5">
                 <h2>@Model.Title</h2>
                 <p>@Model.Text</p>
-            </div>
-            <div class="col-6 p-lg-5">
-                <img class="img-thumbnail" src="@Model.ImageUrl" />
             </div>
         }
         else
         {
-            <div class="col-6 p-lg-5">
-                <img class="img-thumbnail" src="@Model.ImageUrl" />
-            </div>
-            <div class="col-6 p-lg-5">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-5">
                 <h2>@Model.Title</h2>
                 <p>@Model.Text</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-5">
+                <img class="img-thumbnail" src="@Model.ImageUrl" />
             </div>
         }
     </div>
