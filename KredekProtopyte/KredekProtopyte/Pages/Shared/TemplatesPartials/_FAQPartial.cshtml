@@ -27,9 +27,15 @@
 
 }
 
-<div class="row">
+<div class="row text-center">
     <div class="col">
         <h2>@textFAQ</h2>
+        <br />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
         <ul>
             @await Html.PartialAsync("TemplatesPartials/_faqQuestionAndAnswerPartial", new QuestionAndAnswer(answeredFAQ1, textFAQ1))
             @await Html.PartialAsync("TemplatesPartials/_faqQuestionAndAnswerPartial", new QuestionAndAnswer(answeredFAQ2, textFAQ2))
@@ -40,3 +46,4 @@
         </ul>
     </div>
 </div>
+
