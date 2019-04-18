@@ -1,4 +1,4 @@
-﻿namespace KredekProtopyte.Data
+﻿namespace KredekProtopyte.Data.Templates
 {
     public class ImageAndTextTemplate : Entity, IPageContentElement
     {

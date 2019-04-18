@@ -1,4 +1,5 @@
 ﻿using KredekProtopyte.Data;
+using KredekProtopyte.Data.Templates;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace KredekProtopyte.Pages.Kredek

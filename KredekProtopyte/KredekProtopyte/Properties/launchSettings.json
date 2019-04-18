@@ -11,7 +11,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "https://localhost:44393/Kredek/",
+      "launchUrl": "https://localhost:44393/CMS/website?name=Intro",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
