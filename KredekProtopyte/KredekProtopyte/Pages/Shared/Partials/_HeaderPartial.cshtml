@@ -1,4 +1,6 @@
-﻿<header>
+﻿@model List<string>
+
+<header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow ">
         <div class="container">
             <a class="navbar-brand" asp-area="" asp-page="/Index">
@@ -27,6 +29,17 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/Kredek/About">O Nas</a>
                     </li>
+
+                    <!-- #region Test Nav Rendering -->
+
+                    @foreach (var pageName in Model)
+                    {
+                        <li class="nav-item">
+                            <em><a href="https://localhost:44393?pageName=@pageName" class="nav-link text-dark"> @pageName </a></em>
+                        </li>
+                    }
+                    <!-- #endregion -->
+
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/Kredek/Contact">Kontakt</a>
                     </li>
