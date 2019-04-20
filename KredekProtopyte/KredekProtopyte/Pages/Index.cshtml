@@ -1,8 +1,41 @@
 ﻿@page
+@using KredekProtopyte.Data.Templates
 @model KredekProtopyte.Pages.IndexModel
+
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = Model.ThisPage.Title;
 }
 
-<h1>Index</h1>
+@{
+    if (Model.ThisPage.Content != null)
+    {
+        foreach (var item in Model.ThisPage.Content.Elements)
+        {
+            if (item is ImageAndTextTemplate modelImageAndText)
+            {
+                @await Html.PartialAsync("TemplatesPartials/_BannerImageAndTextPartial", modelImageAndText)
+            }
+            else if (item is BannerTemplate modelBanner)
+            {
+                @await Html.PartialAsync("TemplatesPartials/_BannerTemplatePartial", modelBanner)
+            }
+            else if (item is BannerTextAndLinks)
+            {
+                @await Html.PartialAsync("TemplatesPartials/_BannerTextAndLinksPartial")
+            }
+            else if (item is WeAreWorkingOnIt)
+            {
+                @await Html.PartialAsync("TemplatesPartials/_WeAreWorkingOnItPartial")
+            }
+            else if (item is FullWidthBanner modelFullWidthBanner)
+            {
+                @await Html.PartialAsync("TemplatesPartials/_BannerPartial", modelFullWidthBanner)
+            }
+            else if (item is Team)
+            {
+                @await Html.PartialAsync("TemplatesPartials/Team")
+            }
+        }
+    }
 
+}
