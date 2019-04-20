@@ -7,10 +7,20 @@ namespace KredekProtopyte.Data.Website
     {
         public PageContent Content { get; set; }
 
+        /// <summary>
+        /// True - page is in an archive and it is not active (doesn't rendering on site)
+        /// </summary>
+        public bool IsArchived { get; set; }
+
+        /// <summary>
+        /// Page Id in a database
+        /// </summary>
         [Key]
         public string Name { get; set; }
 
-        public string Text { get; set; }
+        /// <summary>
+        /// Page title
+        /// </summary>
         public string Title { get; set; }
     }
 }
