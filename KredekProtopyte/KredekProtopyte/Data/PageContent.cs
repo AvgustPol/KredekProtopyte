@@ -9,6 +9,6 @@ namespace KredekProtopyte.Data
             Elements = new List<IPageContentElement>();
         }
 
-        public List<IPageContentElement> Elements { get; set; }
+        public IList<IPageContentElement> Elements { get; set; }
     }
 }
